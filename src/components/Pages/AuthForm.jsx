@@ -23,6 +23,7 @@ const AuthForm = () => {
     //If user logged in so changing state to true
     //setIsLoggedIn(true)
     //Navigate the particular user to  all pokeon page
+    
     dispatch(login(data.username));
     navigate(`/allpokemon/${data.username}`);
   }
@@ -45,101 +46,7 @@ const AuthForm = () => {
     navigate('/login');
   }
 
-//   return (
-//     <div className="min-h-screen flex items-center justify-center bg-gray-100">
-//       {/* //If user is Logged in then send him to LOGIN PAGE */}
-//       {isLoggedIn ? (
-//         <div className="p-8 bg-white rounded shadow-md text-center">
-//           <h2 className="text-2xl font-bold mb-4">Welcome, {username}!</h2>
-//           <button 
-//             onClick={handleLogout}
-//             className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
-//           >
-//             Logout
-//           </button>
-//         </div>
-//       ) : (
-//         //If not logged in user will signup using this
-//         <div className="p-8 bg-white rounded shadow-md">
-//           {isSigningUp ? (
-//             <form onSubmit={handleSubmit(onSignup)}>
-//               <h2 className="text-2xl font-bold mb-4">Sign Up</h2>
-//               <div className="mb-4">
-//                 <label className="block text-gray-700">Username:</label>
-//                 <input
-//                   {...register('username', { required: true })}
-//                   type="text"
-//                   className="mt-1 p-2 w-full border rounded"
-//                 />
-//                 {errors.username && <span className="text-red-500">Username is required</span>}
-//               </div>
-//               <div className="mb-4">
-//                 <label className="block text-gray-700">Password:</label>
-//                 <input
-//                   {...register('password', { required: true })}
-//                   type="password"
-//                   className="mt-1 p-2 w-full border rounded"
-//                 />
-//                 {errors.password && <span className="text-red-500">Password is required</span>}
-//               </div>
-//               <button 
-//                 type="submit"
-//                 className="w-full py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
-//               >
-//                 Sign Up
-//               </button>
-//               <button 
-//                 type="button" 
-//                 onClick={() => setIsSigningUp(false)}
-//                 className="w-full py-2 mt-2 bg-gray-500 text-white rounded hover:bg-gray-700"
-//               >
-//                 Switch to Login
-//               </button>
-//             </form>
-//           ) : (
-//             //Handle submit necessary dependency for react hook form
-//             <form onSubmit={handleSubmit(onLogin)}>
-//               <h2 className="text-2xl font-bold mb-4">Login</h2>
-//               <div className="mb-4">
-//                 <label className="block text-gray-700">Username:</label>
-//                 <input
-//                   {...register('username', { required: true })}
-//                   type="text"
-//                   className="mt-1 p-2 w-full border rounded"
-//                 />
-//                 {errors.username && <span className="text-red-500">Username is required</span>}
-//               </div>
-//               <div className="mb-4">
-//                 <label className="block text-gray-700">Password:</label>
-//                 <input
-//                   {...register('password', { required: true })}
-//                   type="password"
-//                   className="mt-1 p-2 w-full border rounded"
-//                 />
-//                 {errors.password && <span className="text-red-500">Password is required</span>}
-//               </div>
-//               <button 
-//                 type="submit"
-//                 className="w-full py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
-//               >
-//                 Login
-//               </button>
-//               <button 
-//                 type="button" 
-//                 onClick={() => setIsSigningUp(true)}
-//                 className="w-full py-2 mt-2 bg-gray-500 text-white rounded hover:bg-gray-700"
-//               >
-//                 Switch to Sign Up
-//               </button>
-//             </form>
-//           )}
-//         </div>
-//       )}
-//     </div>
-//   );
-// };
 
-// export default AuthForm;
 return (
   <div className="min-h-screen flex items-center justify-center bg-gray-100">
     {isLoggedIn ? (
