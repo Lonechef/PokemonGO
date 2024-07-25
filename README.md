@@ -6,19 +6,31 @@ User Authentication (Login and Signup)
 Fetch and Display Pokémon List with Infinite Scrolling
 View Detailed Information for Individual Pokémon
 User Logout Functionality
+Installation and Setup
+Clone the Repository:
+
+git clone https://github.com/yourusername/pokemon-app.git
+cd pokemon-app
+Install Dependencies:
+
+npm install
+Start the Development Server:
+
+npm start
+Build for Production:
+
+
+
+npm run build
 Usage
 Authentication:
-
 Navigate to /login or /signup to authenticate.
 Viewing Pokémon:
-
 After logging in, navigate to /allpokemon/:username to view the list of Pokémon.
 Click on any Pokémon card to see detailed information about that Pokémon.
 Pagination:
-
 Use the navigation buttons to load more Pokémon.
 Logout:
-
 Click the logout button to log out and return to the login page.
 Technologies Used
 React: JavaScript library for building user interfaces
